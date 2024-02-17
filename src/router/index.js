@@ -10,6 +10,12 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/profile/:username',
+      name: 'Profile',
+      component: () => import('../views/Profile.vue'),
+      props: true // This allows you to pass route params as props to the component
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

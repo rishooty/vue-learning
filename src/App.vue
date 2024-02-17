@@ -13,6 +13,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink :to="{ name: 'Profile', params: { username: 'johndoe' } }">
+          Go to John Doe's profile
+        </RouterLink>
       </nav>
     </div>
   </header>
